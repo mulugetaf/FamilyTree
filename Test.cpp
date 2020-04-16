@@ -47,6 +47,12 @@ static family::Tree F ("sdfsey");
     CHECK(T.relation("Yako") == "unrelated");
     CHECK(T.relation("") == "unrelated");
     CHECK(T.relation("sara") == "unrelated");
+    CHECK(T.relation("YakKo") == "unrelated");
+    CHECK(T.relation(" -sdf") == "unrelated");
+    CHECK(T.relation("saRRa") == "unrelated");
+    CHECK(T.relation("YAkko") == "unrelated");
+    CHECK(T.relation("") == "unrelated");
+    CHECK(T.relation("sAAra") == "unrelated");
 
 }
  TEST_CASE("Test for find function") {
@@ -67,6 +73,12 @@ static family::Tree F ("sdfsey");
     CHECK_THROWS(T.addFather("Avi",""));
     CHECK_THROWS(T.addFather("Abi","Yaakov"));
     CHECK_THROWS(T.addFather("xyy","sara"));
+    CHECK_THROWS(T.addFather(""Yoseef"Yaakov"));
+    CHECK_THROWS(T.addFather("Yo0sef",""));
+    CHECK_THROWS(T.addFather("","Yosef"));
+    CHECK_THROWS(T.addFather("Avi","  Yosef"));
+    CHECK_THROWS(T.addFather("Abi","YAakove"));
+    CHECK_THROWS(T.addFather("Yo0sef","sara"));
       
     CHECK_THROWS(T.addMother("","sara"));
     CHECK_THROWS(T.addMother("sara",""));
