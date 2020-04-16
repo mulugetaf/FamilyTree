@@ -73,7 +73,7 @@ static family::Tree F ("sdfsey");
     CHECK_THROWS(T.addFather("Avi",""));
     CHECK_THROWS(T.addFather("Abi","Yaakov"));
     CHECK_THROWS(T.addFather("xyy","sara"));
-    CHECK_THROWS(T.addFather(""Yoseef"Yaakov"));
+    CHECK_THROWS(T.addFather("Yoseef","Yaakov"));
     CHECK_THROWS(T.addFather("Yo0sef",""));
     CHECK_THROWS(T.addFather("","Yosef"));
     CHECK_THROWS(T.addFather("Avi","  Yosef"));
