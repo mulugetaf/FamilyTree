@@ -2,6 +2,7 @@
 #include "doctest.h"
 #include "FamilyTree.hpp"
 using namespace family;
+using namespace std;
 
 static family::Tree T ("Yosef");
 static family::Tree F ("sdfsey");
