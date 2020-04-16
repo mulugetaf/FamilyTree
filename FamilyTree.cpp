@@ -9,12 +9,12 @@ Node& findNode(Node& root, string child_name){
     
      if (root.name.compare(child_name) != 0)
     {
-        cout<<root.name<<":1"<<endl;
+        cout<<root.name<<">>>A"<<endl;
         return findNode(*root.father, child_name);     
     }
     else if(root.name.compare(child_name) == 0)
     {
-        cout<<root.name<<":2"<<endl;
+        cout<<root.name<<">>>B"<<endl;
         return root;  
     }
     else
